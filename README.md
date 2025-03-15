@@ -1,4 +1,5 @@
-## DESOM Pytorch Lightning Reimplementation
+## ViT-SOM: A Simple Self Organizing Map with Visual Transformer
+https://arxiv.org/abs/2503.04121
 
 ### **Environment**
 
@@ -24,5 +25,3 @@ Pytorch Lightning → `2.2.1`
 `/models` → holds model files (`desom.py`, `vit_som.py`, etc.)
 
 `/tools` → contains utility scripts for evaluation metric gathering and other tools
-
-## Experiments
