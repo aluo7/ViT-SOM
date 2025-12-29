@@ -1,0 +1,57 @@
+hyperparameters:
+  model_arch: vit_som
+  total_epochs: 500
+  batch_size: 128
+  gamma: 0.01
+
+  som:
+    map_size: [4, 4]
+    Tmax: 4
+    Tmin: 0.1
+    distance_fcn: cosine
+    topology: square
+    use_reduced: False
+
+  vit:
+    patch_size: 4
+    emb_dim: 192
+    depth: 12
+    dec_emb_dim: 96
+    dec_depth: 2
+    heads: 3
+    mlp_ratio: 4
+    qkv_bias: True
+    qk_norm: False
+    proj_drop: 0
+    attn_drop: 0
+    drop_path: 0.1
+    global_pool: False
+
+  optimizer:
+    type: adamw
+    lr: 0.0005
+    min_lr: 0.000001
+    beta_1: 0.9
+    beta_2: 0.999
+    scheduler: cosine_annealing
+    warmup_epochs: 25
+    weight_decay: 0.05
+    layer_decay: 0.75
+    smoothing: 0.1
+
+data:
+  dataset: cifar-10
+  num_classes: 10
+  num_channels: 3
+  input_size: 32
+  num_workers: 16
+
+  augment:
+    horizontal_flip: 0.5
+    randaug_n: 2
+    resize_scale: [0.08, 1.0]
+    resize_ratio: [0.75, 1.3333]
+    reprob: 0.25
+    remode: pixel
+    recount: 1
+    autoaugment: True

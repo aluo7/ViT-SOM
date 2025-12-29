@@ -1,0 +1,39 @@
+hyperparameters:
+  model_arch: swin
+  total_epochs: 500
+  batch_size: 512
+  
+  swin:
+    patch_size: 4
+    window_size: 4
+    embed_dim: 96
+    depths: [2, 2]
+    num_heads: [3, 6]
+
+  optimizer:
+    type: adamw
+    lr: 0.0005
+    min_lr: 0.000001
+    beta_1: 0.9
+    beta_2: 0.999
+    scheduler: cosine_annealing
+    warmup_epochs: 25
+    weight_decay: 0.05
+    smoothing: 0.1
+
+data:
+  dataset: medmnist
+  num_classes: 9
+  num_channels: 3
+  input_size: 28
+  num_workers: 16
+
+  augment:
+    horizontal_flip: 0.5
+    randaug_n: 2
+    resize_scale: [0.08, 1.0]
+    resize_ratio: [0.75, 1.3333]
+    reprob: 0.25
+    remode: pixel
+    recount: 1
+    autoaugment: True

@@ -1,0 +1,42 @@
+hyperparameters:
+  model_arch: desom
+  total_epochs: 60
+  batch_size: 128
+  gamma: 0.001
+
+  som:
+    map_size: [8, 8]
+    lr_max: 0.001
+    lr_min: 0.001
+    Tmax: 8
+    Tmin: 0.1
+    distance_fcn: manhattan
+    topology: square
+
+  ae:
+    encoder_dims: [500, 500, 2000, 10]
+    act: relu
+    batch_norm: False
+
+  optimizer:
+    type: adam
+    lr: 0.001
+    beta_1: 0.9
+    beta_2: 0.999
+
+data:
+  dataset: mnist
+  num_classes: 0
+  num_channels: 1
+  input_size: 28
+  num_workers: 16
+
+  augment:
+    horizontal_flip: 0.0
+    randaug_n: 0
+    resize_scale: [1.0, 1.0]
+    resize_ratio: [1.0, 1.0]
+    reprob: 0.0
+    remode: 'pixel'
+    recount: 0
+    autoaugment: False
