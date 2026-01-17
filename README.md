@@ -1,6 +1,6 @@
 # ViT-SOM
 
-This is the official implementation of the paper: [A. Luo, K. Yuan, "Simple Self-Organizing Map with Visual Transformer," in IEEE Signal Processing Letters, DOI: 10.1109/LSP.2025.3643388.](https://ieeexplore.ieee.org/document/11298561)
+This is the official implementation of the paper: [A. Luo, K. Yuan, "Simple Self-Organizing Map with Vision Transformer," in IEEE Signal Processing Letters, DOI: 10.1109/LSP.2025.3643388.](https://ieeexplore.ieee.org/document/11298561)
 
 ![ViT-SOM Architecture](img/arch.png)
 *Figure 1: Overview of the ViT-SOM architecture demonstrating the self-construction loss mechanism.*
